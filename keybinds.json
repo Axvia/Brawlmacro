@@ -1,0 +1,16 @@
+{
+    "Key Up": "Up",
+    "Key Down": "Down",
+    "Key Right": "Right",
+    "Key Left": "Left",
+    "Key Jump": "Space",
+    "Key Dodge": "z",
+    "Key Light Attack": "c",
+    "Key Heavy Attack": "x",
+    "Key Throw": "v",
+    "Key Pickup": "v",
+    "Developer": {
+        "Copyright": "Necode",
+        "YouTube": "https://www.youtube.com/channel/UCn_48Cl9BjKKjvS3ADk1Ltw"
+    }
+}

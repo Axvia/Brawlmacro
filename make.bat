@@ -1,0 +1,1 @@
+pyinstaller index.py --onefile --noconsole --add-data "assets/*.py;assets" --add-data "icon/*.ico;icon" --add-data "images/*.png;images" --add-data "inputs/*.py;inputs" --add-data "weapons/*.py;weapons" -i E:/Py/Brawlhalla/Macro2/icon/app.ico
