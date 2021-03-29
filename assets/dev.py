@@ -210,8 +210,11 @@ def oldMacro():
 
 	app = tk.Toplevel()
 	app.iconbitmap(resource_path('icon/app.ico'))
-	app.title("Advance Brawlhalla Macro by Necode")
+	app.title("Advnecode")
 	app.after(1000, disableResize)
+
+	appMarg = tk.LabelFrame(app, text="Weapons", padx=5, pady=5)
+	appMarg.pack(padx=5, pady=5)
 
 
 	def RightLeftRelease():
@@ -246,181 +249,229 @@ def oldMacro():
 		if event.name == CType0Text.get():
 			print('Orb: SLight -> Jump -> SAir')
 			# Movement 1
+			print("Light Attack")
 			keyboard.press(LightAttack)
 			keyboard.release(LightAttack)
 			# Delay 1
+			print("Wait for 0.5 sec")
 			time.sleep(0.5)
 			# Movement 2
+			print("Jump")
+			print("Light Attack")
 			keyboard.press(JUMP)
 			keyboard.press(LightAttack)
 			keyboard.release(JUMP)
 			keyboard.release(LightAttack)
+			print("==== Orb combo end ====")
 
 	def onComboType1(event):
 		if event.name == CType1Text.get():
 			print('Unarmed: DLight -> Jump -> GP')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.22 sec")
 			time.sleep(0.22)
 			# Movement 2
+			print("Jump")
 			keyboard.press(JUMP)
 			keyboard.release(JUMP)
 			# Delay 2
+			print("Wait for 0.05 sec")
 			time.sleep(0.05)
 			# Movement 3
+			print("Groundpound")
 			keyboard.press(DOWN)
 			keyboard.press(HeavyAttack)
 			keyboard.release(DOWN)
 			keyboard.release(HeavyAttack)
+			print("==== Unarmed combo end ====")
 
 	def onComboType2(event):
 		if event.name == CType2Text.get():
 			print('Unarmed: DLight -> Jump -> NAir')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.22 sec")
 			time.sleep(0.22)
 			# Movement 2
+			print("Jump")
 			keyboard.press(JUMP)
 			keyboard.release(JUMP)
 			# Delay 2
+			print("Wait for 0.55 sec")
 			time.sleep(0.05)
 			# Movement 3
+			print("Neutral Air")
 			keyboard.press(UP)
 			keyboard.press(LightAttack)
 			keyboard.release(UP)
 			keyboard.release(LightAttack)
+			print("==== Unarmed combo end ====")
 
 	def onComboType3(event):
 		if event.name == CType3Text.get():
 			print('Sword: DLight -> Jump -> SAir')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.45 sec")
 			time.sleep(0.45)
 			# Movement 2
+			print("Jump and Light Attack (Side Air when key left or right is pressed)")
 			keyboard.press(JUMP)
 			keyboard.press(LightAttack)
 			keyboard.release(JUMP)
 			keyboard.release(LightAttack)
+			print("==== Sword combo end ====")
 
 	def onComboType4(event):
 		if event.name == CType4Text.get():
 			print('Sword: DLight -> NAir')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.45 sec")
 			time.sleep(0.45)
 			# Movement 2
+			print("Jump and Neutral Attack")
 			keyboard.press(UP)
 			keyboard.press(LightAttack)
 			keyboard.release(UP)
 			keyboard.release(LightAttack)
+			print("==== Sword combo end ====")
 
 	def onComboType5(event):
 		if event.name == CType5Text.get():
 			print('Sword: DLight -> Jump -> DAir')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.45 sec")
 			time.sleep(0.45)
 			# Movement 2
+			print("Jump and Down Air")
 			keyboard.press(JUMP)
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(JUMP)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
+			print("==== Sword combo end ====")
 
 	def onComboType6(event):
 		if event.name == CType6Text.get():
 			print('Sword: DLight -> Jump -> Recovery')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.455 sec")
 			time.sleep(0.45)
 			# Movement 2
+			print("Jump and Recovery")
 			keyboard.press(JUMP)
 			keyboard.press(UP)
 			keyboard.press(HeavyAttack)
 			keyboard.release(JUMP)
 			keyboard.release(UP)
 			keyboard.release(HeavyAttack)
+			print("==== Sword combo end ====")
 
 	def onComboType7(event):
 		if event.name == CType7Text.get():
 			print('Lance: SLight -> Jump -> SAir/NAir') # Also work with NAir if you don't press left or right
 			# Movement 1
+			print("Light Attack (Side Light when key left or right is pressed)")
 			keyboard.press(LightAttack)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.4 sec")
 			time.sleep(0.4)
 			# Movement 2
+			print("Jump and Side Air when key left or right is pressed and NAir when key left or right is not pressed")
 			keyboard.press(JUMP)
 			keyboard.press(LightAttack)
 			keyboard.release(JUMP)
 			keyboard.release(LightAttack)
+			print("==== Rocket Lance combo end ====")
 
 	def onComboType8(event):
 		if event.name == CType8Text.get():
 			print('Lance: SLight -> Jump -> Recovery')
 			# Movement 1
+			print("Light Attack (Side Light when left or right key is pressed)")
 			keyboard.press(LightAttack)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.4 sec")
 			time.sleep(0.4)
 			# Movement 2
+			print("Jump and Recovery (To get chance hitting the opponent, opponent must damaged 80+)")
 			keyboard.press(JUMP)
 			keyboard.press(HeavyAttack)
 			keyboard.release(JUMP)
 			keyboard.release(HeavyAttack)
+			print("==== Rocke Lance combo end ====")
 
 	def onComboType9(event):
 		if event.name == CType9Text.get():
 			print('Lance: SLight -> Jump -> DAir')
 			# Movement 1
+			print("Light Attack (Side Light when left or right key is pressed)")
 			keyboard.press(LightAttack)
 			keyboard.release(LightAttack)
 			# delay 1
+			print("Wait for 0.41 (Chance hitting the opponent based on legend dexterity)")
 			time.sleep(0.41)
 			# Movement 2
+			print("Jump and Down Air")
 			keyboard.press(JUMP)
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(JUMP)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
+			print("==== Lance combo end ====")
 
 	def onComboType10(event):
 		if event.name == CType10Text.get():
 			print('Hammer: DLight -> Jump -> DAir')
 			# Movement 1
+			print("Down Air")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay
+			print("Wait for 0.3 (It's really hard to hit the opponent by this combo)")
 			time.sleep(0.3)
 			# Movement 2
+			print("Jump and Down Air")
 			keyboard.press(DOWN)
 			keyboard.press(DODGE)
 			keyboard.press(JUMP)
@@ -429,55 +480,69 @@ def oldMacro():
 			keyboard.release(DODGE)
 			keyboard.release(JUMP)
 			keyboard.release(LightAttack)
+			print("==== Hammer combo end ====")
 
 	def onComboType11(event):
 		if event.name == CType11Text.get():
 			print('Hammer: DLight -> Jump -> SAir')
 			# Movement 1
+			print("Down Light")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay
+			print("Wait for 0.35 sec")
 			time.sleep(0.35)
 			# Movement 2
+			print("Jump and Side Air (NAir when key left or right not pressed)")
 			keyboard.press(JUMP)
 			keyboard.press(LightAttack)
 			keyboard.release(JUMP)
 			keyboard.release(LightAttack)
+			print("==== Hammer combo end ====")
 
 	def onComboType12(event):
 		if event.name == CType12Text.get(): # Press left or right required
 			print('Hammer: DLight -> Jump -> FDodge -> Recovery')
 			# Movement 1
+			print("==== Russian bylat Mafia ====")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay 1
+			print("Wait for 0.4 sec")
 			time.sleep(0.4)
 			# Movement 2
+			print("Dash Jump and forward dodge a bit following with Hammer Recovery")
 			keyboard.press(JUMP)
 			keyboard.release(JUMP)
 			keyboard.press(DODGE)
 			keyboard.press(HeavyAttack)
 			# Delay 3
+			print("Wait for 0.12 sec")
 			time.sleep(0.12)
 			# Movement 4
+			print("Release dodge and recovery button")
 			keyboard.release(DODGE)
 			keyboard.release(HeavyAttack)
+			print("==== Hammer Russian Mafia end ====")
 
 	def onComboType13(event):
 		if event.name == CType13Text.get(): # Press left or right required
 			print('Blaster: DLight -> Jump -> DAir')
 			# Movement 1
+			print("Down Light (Must press key left or right for better chance)")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay
+			print("Wait for 0.7 sec")
 			time.sleep(0.7)
 			# Movement 2
+			print("Dash Jmp and Down Air")
 			keyboard.press(DOWN)
 			keyboard.press(DODGE)
 			keyboard.press(JUMP)
@@ -486,62 +551,74 @@ def oldMacro():
 			keyboard.release(DODGE)
 			keyboard.release(JUMP)
 			keyboard.release(LightAttack)
-			
+			print("==== Blaster combo end ====")
+
 	def onComboType14(event):
 		if event.name == CType14Text.get():
 			print('Blaster: DLight -> Jump -> Recovery')
 			# Movement 1
+			print("Down Light (Must press key left or right for better chance)")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay
+			print("Wait for 0.7 sec")
 			time.sleep(0.7)
 			# Movement 2
+			print("Jump and Recovery following with Blaster Recovery")
 			keyboard.press(DOWN)
 			keyboard.press(DODGE)
 			keyboard.press(JUMP)
 			keyboard.release(DOWN)
 			keyboard.press(HeavyAttack)
-
+			print("Release all key for this combo")
 			keyboard.release(DODGE)
 			keyboard.release(JUMP)
 			keyboard.release(HeavyAttack)
-		
+			print("==== Blaster combo end ====")
+
 	def onComboType15(event):
 		if event.name == CType15Text.get():
 			# THIS IS THE HARDEST GAUNTLET COMBO, I SPENT 6HOURS JUST TO ADJUST THI DAMN COMBO
 			# YOU MAY GET 70%/50% CHANCE DOING RANDOM COMBO WITH THIS
 			print('Gauntlet: DLight -> Jump -> CDodge -> NAir')
+			print("Down Light (Also work with GC+DLight in air)")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay 1
+			print("Wait for 0.4")
 			time.sleep(0.4)
 			# Movement 2
+			print("Jump and forward dodge a bit following with Neutral Air")
 			keyboard.press(JUMP)
 			keyboard.release(JUMP)
 			keyboard.press(DODGE)
 			keyboard.press(UP)
 			keyboard.press(LightAttack)
 			# Delay 3
+			print("Wait for 0.12 sec")
 			time.sleep(0.12)
 			# Movement 4
 			keyboard.release(DODGE)
 			keyboard.release(UP)
 			keyboard.release(LightAttack)
+			print("==== There you go, favorite Gauntlet combo end ====")
 
 	def onComboType16(event):
 		if event.name == CType16Text.get():
 			print('Greatsword')
 			# Movement 1
+			print("Release user key up for Neutral Light")
 			keyboard.press(UP)
 			keyboard.press(LightAttack)
 			print("NLight")
 			keyboard.release(UP)
 			keyboard.release(LightAttack)
 			# Delay 1
+			print("Wait for 0.3")
 			time.sleep(0.3)
 			# Movement 2
 			UpDownReease()
@@ -549,6 +626,7 @@ def oldMacro():
 			print("SLight")
 			keyboard.release(LightAttack)
 			# Delay 2
+			print("Wait for 0.4")
 			time.sleep(0.4)
 			# Movement 3
 			print("CD")
@@ -556,24 +634,31 @@ def oldMacro():
 			keyboard.press(DODGE)
 			keyboard.release(DOWN)
 			keyboard.release(DODGE)
+			print("==== Greatsword combo (basic 1) end ====")
+
 
 	def onComboType17(event):
-		if event.name == CType17Text.get(): # Press left or right required
+		if event.name == CType17Text.get():
 			print('Greatsword')
 			# Movement 1
+			print("Side Light (Neutral Attack when user not pressing key left or right)")
 			keyboard.press(LightAttack)
 			print("SLight")
 			keyboard.release(LightAttack)
 			# Delay 1
+			print("Wait for 0.3 sec")
 			time.sleep(0.3)
 			# Movement 2
+			print("Release key left or right for user")
 			RightLeftRelease()
+			print("Neutral Light")
 			keyboard.press(UP)
 			keyboard.press(LightAttack)
 			print("NLight")
 			keyboard.release(UP)
 			keyboard.release(LightAttack)
 			# Delay 2
+			print("Wait for 0.4 sec")
 			time.sleep(0.4)
 			# Movement 3
 			print("CD")
@@ -581,26 +666,32 @@ def oldMacro():
 			keyboard.press(DODGE)
 			keyboard.release(DOWN)
 			keyboard.release(DODGE)
+			print("==== Greatsword combo (basic 2) end ====")
 
 	def onComboType18(event):
 		if event.name == CType18Text.get():
 			print('Greatsword')
 			# Movement 1
+			print("Down Light (Best starter for Greatsword combo)")
 			keyboard.press(DOWN)
 			keyboard.press(LightAttack)
 			print("DLight")
 			keyboard.release(DOWN)
 			keyboard.release(LightAttack)
 			# Delay 1
+			print("Wait for 0.4 sec")
 			time.sleep(0.4)
 			# Movement 2
+			print("Release key left or right for user")
 			RightLeftRelease()
+			print("Neutral Light")
 			keyboard.press(UP)
 			keyboard.press(LightAttack)
 			print("NLight")
 			keyboard.release(UP)
 			keyboard.release(LightAttack)
 			# Delay 2
+			print("Wait for 0.4 sec")
 			time.sleep(0.4)
 			# Movement 3
 			print("CD")
@@ -608,14 +699,7 @@ def oldMacro():
 			keyboard.press(DODGE)
 			keyboard.release(DOWN)
 			keyboard.release(DODGE)
-
-	# def onComboType19(event):
-	# 	if event.name == CType19Text.get():
-	# 		print("DELETED COMBO")
-
-	# def onComboType20(event):
-	# 	if event.name == CType20Text.get():
-	# 		print('NOTHING')
+			print("==== Greatsword combo (basic 3) end ====")
 
 	keyboard.on_press(onComboType1)
 	keyboard.on_press(onComboType0)
@@ -636,413 +720,324 @@ def oldMacro():
 	keyboard.on_press(onComboType16)
 	keyboard.on_press(onComboType17)
 	keyboard.on_press(onComboType18)
-	# keyboard.on_press(onComboType19)
-	# keyboard.on_press(onComboType20)
-
-	################################## Command Enable ##################################
-	def CType0Cmd():
-		print(str(CType0Text.get()))
-
-	def CType1Cmd():
-		print(str(CType1Text.get()))
-
-	def CType2Cmd():
-		print(str(CType2Text.get()))
-
-	def CType3Cmd():
-		print(str(CType3Text.get()))
-
-	def CType4Cmd():
-		print(str(CType4Text.get()))
-
-	def CType5Cmd():
-		print(str(CType5Text.get()))
-
-	def CType6Cmd():
-		print(str(CType6Text.get()))
-
-	def CType7Cmd():
-		print(str(CType7Text.get()))
-
-	def CType8Cmd():
-		print(str(CType8Text.get()))
-
-	def CType9Cmd():
-		print(str(CType9Text.get()))
-
-	def CType10Cmd():
-		print(str(CType10Text.get()))
-
-	def CType11Cmd():
-		print(str(CType11Text.get()))
-
-	def CType12Cmd():
-		print(str(CType12Text.get()))
-
-	def CType13Cmd():
-		print(str(CType13Text.get()))
-
-	def CType14Cmd():
-		print(str(CType14Text.get()))
-
-	def CType15Cmd():
-		print(str(CType15Text.get()))
-
-	def CType16Cmd():
-		print(str(CType16Text.get()))
-
-	def CType17Cmd():
-		print(str(CType17Text.get()))
-
-	def CType18Cmd():
-		print(str(CType18Text.get()))
-
-	# def CType19Cmd():
-	# 	print(str(CType19Text.get()))
-
-	# def CType20Cmd():
-	# 	print(str(CType20Text.get()))
 
 	################################## Command Disable ##################################
 	def CType0DisableCmd():
-		print(str(CType0Text.set("SLight -> Jump -> SAir")))
+		CType0Text.set('None')
 
 	def CType1DisableCmd():
-		print(str(CType1Text.set("DLight -> Jump -> GP")))
+		CType1Text.set('None')
 
 	def CType2DisableCmd():
-		print(str(CType2Text.set("DLight -> Jump -> NAir")))
+		CType2Text.set('None')
 
 	def CType3DisableCmd():
-		print(str(CType3Text.set("DLight -> Jump -> SAir")))
+		CType3Text.set('None')
 
 	def CType4DisableCmd():
-		print(str(CType4Text.set("DLight -> NAir")))
+		CType4Text.set('None')
 
 	def CType5DisableCmd():
-		print(str(CType5Text.set("DLight -> Jump -> DAir")))
+		CType5Text.set('None')
 
 	def CType6DisableCmd():
-		print(str(CType6Text.set("DLight -> Jump -> Recovery")))
+		CType6Text.set('None')
 
 	def CType7DisableCmd():
-		print(str(CType7Text.set("SLight -> Jump -> SAir")))
+		CType7Text.set('None')
 
 	def CType8DisableCmd():
-		print(str(CType8Text.set("SLight -> Jump -> Recovery")))
+		CType8Text.set('None')
 
 	def CType9DisableCmd():
-		print(str(CType9Text.set("SLight -> Jump -> DAir")))
+		CType9Text.set('None')
 
 	def CType10DisableCmd():
-		print(str(CType10Text.set("DLight -> Jump -> DAir")))
+		CType10Text.set('None')
 
 	def CType11DisableCmd():
-		print(str(CType11Text.set("DLight -> Jump -> SAir")))
+		CType11Text.set('None')
 
 	def CType12DisableCmd():
-		print(str(CType12Text.set("DLight -> Jump -> FDodge -> Recovery")))
+		CType12Text.set('None')
 
 	def CType13DisableCmd():
-		print(str(CType13Text.set("DLight -> Jump -> DAir")))
+		CType13Text.set('None')
 
 	def CType14DisableCmd():
-		print(str(CType14Text.set("DLight -> Jump -> Recovery")))
+		CType14Text.set('None')
 
 	def CType15DisableCmd():
-		print(str(CType15Text.set("DLight -> Jump -> CDodge -> NAir")))
+		CType15Text.set('None')
 
 	def CType16DisableCmd():
-		print(str(CType16Text.set("NLight -> SLight -> CD")))
+		CType16Text.set('None')
 
 	def CType17DisableCmd():
-		print(str(CType17Text.set("SLight -> NLight -> CD")))
+		CType17Text.set('None')
 
 	def CType18DisableCmd():
-		print(str(CType18Text.set("DLight -> NLight -> CD")))
-
-	# def CType19DisableCmd():
-	# 	print(str(CType19Text.set("NLight -> DLight -> CD")))
-
-	# def CType20DisableCmd():
-	# 	print(str(CType20Text.set("NOTHING")))
+		CType18Text.set('None')
 
 	################################## Label ##################################
-	CType0 = Label(app, text="Orb")
+	CType0 = Label(appMarg, text="Orb")
 	CType0.grid(row=1,column=1)
 
-	CType1 = Label(app, text="Unarmed")
+	CType1 = Label(appMarg, text="Unarmed")
 	CType1.grid(row=2,column=1)
 
-	CType2 = Label(app, text="Unarmed")
+	CType2 = Label(appMarg, text="Unarmed")
 	CType2.grid(row=3,column=1)
 
-	CType3 = Label(app, text="Sword")
+	CType3 = Label(appMarg, text="Sword")
 	CType3.grid(row=4,column=1)
 
-	CType4 = Label(app, text="Sword")
+	CType4 = Label(appMarg, text="Sword")
 	CType4.grid(row=5,column=1)
 
-	CType5 = Label(app, text="Sword")
+	CType5 = Label(appMarg, text="Sword")
 	CType5.grid(row=6,column=1)
 
-	CType6 = Label(app, text="Sword")
+	CType6 = Label(appMarg, text="Sword")
 	CType6.grid(row=7,column=1)
 
-	CType7 = Label(app, text="Lance")
+	CType7 = Label(appMarg, text="Lance")
 	CType7.grid(row=8,column=1)
 
-	CType8 = Label(app, text="Lance")
+	CType8 = Label(appMarg, text="Lance")
 	CType8.grid(row=9,column=1)
 
-	CType9 = Label(app, text="Lance")
+	CType9 = Label(appMarg, text="Lance")
 	CType9.grid(row=10,column=1)
 
-	CType10 = Label(app, text="Hammer")
+	CType10 = Label(appMarg, text="Hammer")
 	CType10.grid(row=11,column=1)
 
-	CType11 = Label(app, text="Hammer")
+	CType11 = Label(appMarg, text="Hammer")
 	CType11.grid(row=12,column=1)
 
-	CType12 = Label(app, text="Hammer")
+	CType12 = Label(appMarg, text="Hammer")
 	CType12.grid(row=13,column=1)
 
-	CType13 = Label(app, text="Blaster")
+	CType13 = Label(appMarg, text="Blaster")
 	CType13.grid(row=14,column=1)
 
-	CType14 = Label(app, text="Blaster")
+	CType14 = Label(appMarg, text="Blaster")
 	CType14.grid(row=15,column=1)
 
-	CType15 = Label(app, text="Gauntlet")
+	CType15 = Label(appMarg, text="Gauntlet")
 	CType15.grid(row=16,column=1)
 
-	CType16 = Label(app, text="Greatsword")
+	CType16 = Label(appMarg, text="Greatsword")
 	CType16.grid(row=17,column=1)
 
-	CType17 = Label(app, text="Greatsword")
+	CType17 = Label(appMarg, text="Greatsword")
 	CType17.grid(row=18,column=1)
 
-	CType18 = Label(app, text="Greatsword")
+	CType18 = Label(appMarg, text="Greatsword")
 	CType18.grid(row=19,column=1)
 
-	# CType19 = Label(app, text="Greatsword")
-	# CType19.grid(row=20,column=1)
 
-	# CType20 = Label(app, text="NOTHING")
-	# CType20.grid(row=21,column=1)
-
-	################################## Input Box ##################################
+	################################## Key ##################################
 	CType0Text		=	StringVar(None)
-	CType0Input		=	EntryWithPlaceholder(app, width=35, placeholder="SLight -> Jump -> SAir", textvariable=CType0Text)
+	CType0Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType0Text, state='readonly')
+	CType0Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType0Input.set('None')
 	CType0Input.grid(row=1,column=2)
 
 	CType1Text		=	StringVar(None)
-	CType1Input		=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> GP", textvariable=CType1Text)
+	CType1Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType1Text, state='readonly')
+	CType1Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType1Input.set('None')
 	CType1Input.grid(row=2,column=2)
 
 	CType2Text		=	StringVar(None)
-	CType2Input		=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> NAir", textvariable=CType2Text)
+	CType2Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType2Text, state='readonly')
+	CType2Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType2Input.set('None')
 	CType2Input.grid(row=3,column=2)
 
 	CType3Text		=	StringVar(None)
-	CType3Input		=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> SAir", textvariable=CType3Text)
+	CType3Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType3Text, state='readonly')
+	CType3Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType3Input.set('None')
 	CType3Input.grid(row=4,column=2)
 
 	CType4Text		=	StringVar(None)
-	CType4Input		=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> NAir", textvariable=CType4Text)
+	CType4Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType4Text, state='readonly')
+	CType4Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType4Input.set('None')
 	CType4Input.grid(row=5,column=2)
 
 	CType5Text		=	StringVar(None)
-	CType5Input		=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> DAir", textvariable=CType5Text)
+	CType5Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType5Text, state='readonly')
+	CType5Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType5Input.set('None')
 	CType5Input.grid(row=6,column=2)
 
 	CType6Text		=	StringVar(None)
-	CType6Input		=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> Recovery", textvariable=CType6Text)
+	CType6Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType6Text, state='readonly')
+	CType6Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType6Input.set('None')
 	CType6Input.grid(row=7,column=2)
 
 	CType7Text		=	StringVar(None)
-	CType7Input		=	EntryWithPlaceholder(app, width=35, placeholder="SLight -> Jump -> SAir", textvariable=CType7Text)
+	CType7Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType7Text, state='readonly')
+	CType7Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType7Input.set('None')
 	CType7Input.grid(row=8,column=2)
 
 	CType8Text		=	StringVar(None)
-	CType8Input		=	EntryWithPlaceholder(app, width=35, placeholder="SLight -> Jump -> Recovery", textvariable=CType8Text)
+	CType8Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType8Text, state='readonly')
+	CType8Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType8Input.set('None')
 	CType8Input.grid(row=9,column=2)
 
 	CType9Text		=	StringVar(None)
-	CType9Input		=	EntryWithPlaceholder(app, width=35, placeholder="SLight -> Jump -> DAir", textvariable=CType9Text)
+	CType9Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType9Text, state='readonly')
+	CType9Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType9Input.set('None')
 	CType9Input.grid(row=10,column=2)
 
 	CType10Text		=	StringVar(None)
-	CType10Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> DAir", textvariable=CType10Text)
+	CType10Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType10Text, state='readonly')
+	CType10Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType10Input.set('None')
 	CType10Input.grid(row=11,column=2)
 
 	CType11Text		=	StringVar(None)
-	CType11Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> SAir", textvariable=CType11Text)
+	CType11Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType11Text, state='readonly')
+	CType11Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType11Input.set('None')
 	CType11Input.grid(row=12,column=2)
 
 	CType12Text		=	StringVar(None)
-	CType12Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> FDodge -> Recovery", textvariable=CType12Text)
+	CType12Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType12Text, state='readonly')
+	CType12Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType12Input.set('None')
 	CType12Input.grid(row=13,column=2)
 
 	CType13Text		=	StringVar(None)
-	CType13Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> DAir", textvariable=CType13Text)
+	CType13Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType13Text, state='readonly')
+	CType13Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType13Input.set('None')
 	CType13Input.grid(row=14,column=2)
 
 	CType14Text		=	StringVar(None)
-	CType14Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> Recovery", textvariable=CType14Text)
+	CType14Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType14Text, state='readonly')
+	CType14Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType14Input.set('None')
 	CType14Input.grid(row=15,column=2)
 
 	CType15Text		=	StringVar(None)
-	CType15Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> Jump -> CDodge -> NAir", textvariable=CType15Text)
+	CType15Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType15Text, state='readonly')
+	CType15Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType15Input.set('None')
 	CType15Input.grid(row=16,column=2)
 
 	CType16Text		=	StringVar(None)
-	CType16Input	=	EntryWithPlaceholder(app, width=35, placeholder="NLight -> SLight -> CD", textvariable=CType16Text)
+	CType16Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType16Text, state='readonly')
+	CType16Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType16Input.set('None')
 	CType16Input.grid(row=17,column=2)
 
 	CType17Text		=	StringVar(None)
-	CType17Input	=	EntryWithPlaceholder(app, width=35, placeholder="SLight -> NLight -> CD", textvariable=CType17Text)
+	CType17Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType17Text, state='readonly')
+	CType17Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType17Input.set('None')
 	CType17Input.grid(row=18,column=2)
 
 	CType18Text		=	StringVar(None)
-	CType18Input	=	EntryWithPlaceholder(app, width=35, placeholder="DLight -> NLight -> CD", textvariable=CType18Text)
+	CType18Input 	=	ttk.Combobox(appMarg, width=5, textvariable=CType18Text, state='readonly')
+	CType18Input['values']= ('None', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+	CType18Input.set('None')
 	CType18Input.grid(row=19,column=2)
 
-	# CType19Text		=	StringVar(None)
-	# CType19Input	=	EntryWithPlaceholder(app, width=35, placeholder="NLight -> DLight -> CD", textvariable=CType19Text)
-	# CType19Input.grid(row=20,column=2)
+	################################## Reset ##################################
 
-	# CType20Text		=	StringVar(None)
-	# CType20Input	=	EntryWithPlaceholder(app, width=35, placeholder="NOTHING", textvariable=CType20Text)
-	# CType20Input.grid(row=21,column=2)
-
-	################################## Acivate ##################################
-	CType0Button = ttk.Button(app, text = "Activate", command = CType0Cmd)
-	CType0Button.grid(row=1,column=3)
-
-	CType1Button = ttk.Button(app, text = "Activate", command = CType1Cmd)
-	CType1Button.grid(row=2,column=3)
-
-	CType2Button = ttk.Button(app, text = "Activate", command = CType2Cmd)
-	CType2Button.grid(row=3,column=3)
-	#
-	CType3Button = ttk.Button(app, text = "Activate", command = CType3Cmd)
-	CType3Button.grid(row=4,column=3)
-
-	CType4Button = ttk.Button(app, text = "Activate", command = CType4Cmd)
-	CType4Button.grid(row=5,column=3)
-
-	CType5Button = ttk.Button(app, text = "Activate", command = CType5Cmd)
-	CType5Button.grid(row=6,column=3)
-
-	CType6Button = ttk.Button(app, text = "Activate", command = CType6Cmd)
-	CType6Button.grid(row=7,column=3)
-
-	CType7Button = ttk.Button(app, text = "Activate", command = CType7Cmd)
-	CType7Button.grid(row=8,column=3)
-
-	CType8Button = ttk.Button(app, text = "Activate", command = CType8Cmd)
-	CType8Button.grid(row=9,column=3)
-
-	CType9Button = ttk.Button(app, text = "Activate", command = CType9Cmd)
-	CType9Button.grid(row=10,column=3)
-
-	CType10Button = ttk.Button(app, text = "Activate", command = CType10Cmd)
-	CType10Button.grid(row=11,column=3)
-
-	CType11Button = ttk.Button(app, text = "Activate", command = CType11Cmd)
-	CType11Button.grid(row=12,column=3)
-
-	CType12Button = ttk.Button(app, text = "Activate", command = CType12Cmd)
-	CType12Button.grid(row=13,column=3)
-
-	CType13Button = ttk.Button(app, text = "Activate", command = CType13Cmd)
-	CType13Button.grid(row=14,column=3)
-
-	CType14Button = ttk.Button(app, text = "Activate", command = CType14Cmd)
-	CType14Button.grid(row=15,column=3)
-
-	CType15Button = ttk.Button(app, text = "Activate", command = CType15Cmd)
-	CType15Button.grid(row=16,column=3)
-
-	CType16Button = ttk.Button(app, text = "Activate", command = CType16Cmd)
-	CType16Button.grid(row=17,column=3)
-
-	CType17Button = ttk.Button(app, text = "Activate", command = CType17Cmd)
-	CType17Button.grid(row=18,column=3)
-
-	CType18Button = ttk.Button(app, text = "Activate", command = CType18Cmd)
-	CType18Button.grid(row=19,column=3)
-
-	# CType19Button = ttk.Button(app, text = "Activate", command = CType19Cmd)
-	# CType19Button.grid(row=20,column=3)
-
-	# CType20Button = ttk.Button(app, text = "Activate", command = CType20Cmd)
-	# CType20Button.grid(row=21,column=3)
-
-	################################## Deactivate ##################################
-
-	CType0DisableButton = ttk.Button(app, text = "Deactivate", command = CType0DisableCmd)
+	CType0DisableButton = ttk.Button(appMarg, text = "Reset", command = CType0DisableCmd)
 	CType0DisableButton.grid(row=1,column=4)
 
-	CType1DisableButton = ttk.Button(app, text = "Deactivate", command = CType1DisableCmd)
+	CType1DisableButton = ttk.Button(appMarg, text = "Reset", command = CType1DisableCmd)
 	CType1DisableButton.grid(row=2,column=4)
 
-	CType2DisableButton = ttk.Button(app, text = "Deactivate", command = CType2DisableCmd)
+	CType2DisableButton = ttk.Button(appMarg, text = "Reset", command = CType2DisableCmd)
 	CType2DisableButton.grid(row=3,column=4)
 
-	CType3DisableButton = ttk.Button(app, text = "Deactivate", command = CType3DisableCmd)
+	CType3DisableButton = ttk.Button(appMarg, text = "Reset", command = CType3DisableCmd)
 	CType3DisableButton.grid(row=4,column=4)
 
-	CType4DisableButton = ttk.Button(app, text = "Deactivate", command = CType4DisableCmd)
+	CType4DisableButton = ttk.Button(appMarg, text = "Reset", command = CType4DisableCmd)
 	CType4DisableButton.grid(row=5,column=4)
 
-	CType5DisableButton = ttk.Button(app, text = "Deactivate", command = CType5DisableCmd)
+	CType5DisableButton = ttk.Button(appMarg, text = "Reset", command = CType5DisableCmd)
 	CType5DisableButton.grid(row=6,column=4)
 
-	CType6DisableButton = ttk.Button(app, text = "Deactivate", command = CType6DisableCmd)
+	CType6DisableButton = ttk.Button(appMarg, text = "Reset", command = CType6DisableCmd)
 	CType6DisableButton.grid(row=7,column=4)
 
-	CType7DisableButton = ttk.Button(app, text = "Deactivate", command = CType7DisableCmd)
+	CType7DisableButton = ttk.Button(appMarg, text = "Reset", command = CType7DisableCmd)
 	CType7DisableButton.grid(row=8,column=4)
 
-	CType8DisableButton = ttk.Button(app, text = "Deactivate", command = CType8DisableCmd)
+	CType8DisableButton = ttk.Button(appMarg, text = "Reset", command = CType8DisableCmd)
 	CType8DisableButton.grid(row=9,column=4)
 
-	CType9DisableButton = ttk.Button(app, text = "Deactivate", command = CType9DisableCmd)
+	CType9DisableButton = ttk.Button(appMarg, text = "Reset", command = CType9DisableCmd)
 	CType9DisableButton.grid(row=10,column=4)
 
-	CType10DisableButton = ttk.Button(app, text = "Deactivate", command = CType10DisableCmd)
+	CType10DisableButton = ttk.Button(appMarg, text = "Reset", command = CType10DisableCmd)
 	CType10DisableButton.grid(row=11,column=4)
 
-	CType11DisableButton = ttk.Button(app, text = "Deactivate", command = CType11DisableCmd)
+	CType11DisableButton = ttk.Button(appMarg, text = "Reset", command = CType11DisableCmd)
 	CType11DisableButton.grid(row=12,column=4)
 
-	CType12DisableButton = ttk.Button(app, text = "Deactivate", command = CType12DisableCmd)
+	CType12DisableButton = ttk.Button(appMarg, text = "Reset", command = CType12DisableCmd)
 	CType12DisableButton.grid(row=13,column=4)
 
-	CType13DisableButton = ttk.Button(app, text = "Deactivate", command = CType13DisableCmd)
+	CType13DisableButton = ttk.Button(appMarg, text = "Reset", command = CType13DisableCmd)
 	CType13DisableButton.grid(row=14,column=4)
 
-	CType14DisableButton = ttk.Button(app, text = "Deactivate", command = CType14DisableCmd)
+	CType14DisableButton = ttk.Button(appMarg, text = "Reset", command = CType14DisableCmd)
 	CType14DisableButton.grid(row=15,column=4)
 
-	CType15DisableButton = ttk.Button(app, text = "Deactivate", command = CType15DisableCmd)
+	CType15DisableButton = ttk.Button(appMarg, text = "Reset", command = CType15DisableCmd)
 	CType15DisableButton.grid(row=16,column=4)
 
-	CType16DisableButton = ttk.Button(app, text = "Deactivate", command = CType16DisableCmd)
+	CType16DisableButton = ttk.Button(appMarg, text = "Reset", command = CType16DisableCmd)
 	CType16DisableButton.grid(row=17,column=4)
 
-	CType17DisableButton = ttk.Button(app, text = "Deactivate", command = CType17DisableCmd)
+	CType17DisableButton = ttk.Button(appMarg, text = "Reset", command = CType17DisableCmd)
 	CType17DisableButton.grid(row=18,column=4)
 
-	CType18DisableButton = ttk.Button(app, text = "Deactivate", command = CType18DisableCmd)
+	CType18DisableButton = ttk.Button(appMarg, text = "Reset", command = CType18DisableCmd)
 	CType18DisableButton.grid(row=19,column=4)
 
-	# CType19DisableButton = ttk.Button(app, text = "Deactivate", command = CType19DisableCmd)
-	# CType19DisableButton.grid(row=20,column=4)
 
-	# CType20DisableButton = ttk.Button(app, text = "Deactivate", command = CType20DisableCmd)
-	# CType20DisableButton.grid(row=21,column=4)
+	def OnExit():
+		CType0DisableCmd()
+		CType1DisableCmd()
+		CType2DisableCmd()
+		CType3DisableCmd()
+		CType4DisableCmd()
+		CType5DisableCmd()
+		CType6DisableCmd()
+		CType7DisableCmd()
+		CType8DisableCmd()
+		CType9DisableCmd()
+		CType10DisableCmd()
+		CType11DisableCmd()
+		CType12DisableCmd()
+		CType13DisableCmd()
+		CType14DisableCmd()
+		CType15DisableCmd()
+		CType16DisableCmd()
+		CType17DisableCmd()
+		CType18DisableCmd()
+		print('Exit')
+		app.destroy()
+
+	ExitAppButton = ttk.Button(app, text="Exit", command=OnExit)
+	ExitAppButton.pack(side="bottom")
+
 
 	app.mainloop()
