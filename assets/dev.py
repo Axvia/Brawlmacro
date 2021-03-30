@@ -1039,5 +1039,7 @@ def oldMacro():
 	ExitAppButton = ttk.Button(app, text="Exit", command=OnExit)
 	ExitAppButton.pack(side="bottom")
 
-
+	def disableX():
+		pass
+	app.protocol("WM_DELETE_WINDOW", disableX)
 	app.mainloop()
